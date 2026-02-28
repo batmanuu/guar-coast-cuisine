@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Sobre Nós", href: "#sobre" },
@@ -44,11 +45,14 @@ const Navbar = () => {
       )}
 
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 group">
-          <span className="font-display text-2xl md:text-3xl font-semibold text-cream tracking-wide">
-            Restaurante dos{" "}
-            <span className="text-gold italic">Guarás</span>
-          </span>
+        <a href="#" className="flex items-center gap-2 group">
+          <img
+            src={logo}
+            alt="Sítio dos Guarás"
+            className={`transition-all duration-500 brightness-0 invert opacity-90 group-hover:opacity-100 ${
+              scrolled ? "h-10" : "h-14"
+            }`}
+          />
         </a>
 
         {/* Desktop nav */}

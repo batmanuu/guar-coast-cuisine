@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-restaurant.jpg";
+import logo from "@/assets/logo.png";
 
 const ShimmerParticle = ({ delay, x, y }: { delay: number; x: number; y: number }) => (
   <motion.div
@@ -56,21 +57,23 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
+          <motion.img
+            src={logo}
+            alt="Sítio dos Guarás"
+            className="h-32 md:h-44 lg:h-52 mx-auto mb-8 brightness-0 invert opacity-90"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.9, scale: 1 }}
+            transition={{ delay: 0.3, duration: 1.2 }}
+          />
+
           <motion.p
             className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-gold mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
           >
             Gastronomia à beira do mangue
           </motion.p>
-
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-light text-cream leading-none mb-4">
-            Restaurante
-          </h1>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl italic font-medium text-gold leading-none mb-8">
-            dos Guarás
-          </h1>
 
           <motion.div
             className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"

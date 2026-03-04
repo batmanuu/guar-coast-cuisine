@@ -39,7 +39,7 @@ const MenuSection = () => {
   const [active, setActive] = useState("Entradas");
 
   return (
-    <section id="cardapio" className="relative min-h-screen py-32 bg-dark overflow-hidden flex items-center">
+    <section id="cardapio" className="relative min-h-screen py-32 bg-petrol overflow-hidden flex items-center">
       {/* Guará decorativo */}
       <motion.img
         src={guara2}

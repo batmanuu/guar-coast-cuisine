@@ -59,7 +59,7 @@ const MenuSection = () => {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
             Nossos Sabores
           </p>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-2">
+          <h2 className="font-display text-5xl md:text-6xl font-light text-dark mb-2">
             O <span className="italic text-primary">Cardápio</span>
           </h2>
           <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
@@ -74,7 +74,7 @@ const MenuSection = () => {
               className={`font-body text-sm tracking-[0.15em] uppercase px-6 py-3 rounded-sm border transition-all duration-500 ${
                 active === cat
                   ? "bg-primary text-cream border-primary"
-                  : "bg-transparent text-cream/60 border-cream/20 hover:border-primary/50 hover:text-cream"
+                  : "bg-transparent text-dark/60 border-dark/20 hover:border-primary/50 hover:text-dark"
               }`}
             >
               {cat}
@@ -98,7 +98,7 @@ const MenuSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15 }}
-                className="group flex gap-5 p-5 rounded-sm border border-cream/10 hover:border-primary/30 transition-all duration-500 hover:bg-cream/5"
+                className="group flex gap-5 p-5 rounded-sm border border-dark/10 hover:border-primary/30 transition-all duration-500 hover:bg-white/60"
               >
                 <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-sm">
                   <img
@@ -110,12 +110,12 @@ const MenuSection = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-display text-xl text-cream group-hover:text-primary transition-colors">
+                    <h3 className="font-display text-xl text-dark group-hover:text-primary transition-colors">
                       {item.name}
                     </h3>
                     <span className="font-display text-lg text-primary">{item.price}</span>
                   </div>
-                  <p className="font-body text-sm text-cream/50 leading-relaxed">{item.desc}</p>
+                  <p className="font-body text-sm text-dark/50 leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

@@ -12,18 +12,26 @@ const menuItems: Record<string, Array<{ name: string; desc: string; price: strin
   Entradas: [
     { name: "Ceviche de Camarão", desc: "Camarão fresco marinado em limão com manga e coentro", price: "R$ 58", img: dish2 },
     { name: "Carpaccio de Peixe", desc: "Lâminas finas de robalo com azeite trufado e alcaparras", price: "R$ 52", img: dish1 },
+    { name: "Casquinha de Caranguejo", desc: "Casquinha gratinada com catupiry e temperos regionais", price: "R$ 46", img: dish3 },
+    { name: "Bolinho de Piracuí", desc: "Bolinhos crocantes de peixe seco com molho tártaro de ervas", price: "R$ 38", img: dish4 },
   ],
   Peixes: [
     { name: "Filhote ao Tucupi", desc: "Filhote grelhado com molho de tucupi, jambu e arroz de castanha", price: "R$ 128", img: dish1 },
     { name: "Robalo na Brasa", desc: "Robalo fresco na brasa com legumes da estação e molho de ervas", price: "R$ 118", img: dish1 },
+    { name: "Pirarucu de Casaca", desc: "Pirarucu desfiado com banana da terra, farinha e leite de coco", price: "R$ 135", img: dish3 },
+    { name: "Tambaqui Assado", desc: "Costela de tambaqui assada lentamente com molho de castanhas", price: "R$ 112", img: dish2 },
   ],
   "Frutos do Mar": [
     { name: "Lagosta Grelhada", desc: "Lagosta com manteiga de ervas finas e farofa de dendê", price: "R$ 189", img: dish3 },
     { name: "Camarão Flambado", desc: "Camarões gigantes flambados no conhaque com risoto de açafrão", price: "R$ 145", img: dish2 },
+    { name: "Moqueca Paraense", desc: "Moqueca de camarão e peixe com leite de coco e dendê", price: "R$ 132", img: dish1 },
+    { name: "Polvo à Lagareiro", desc: "Tentáculos de polvo grelhados com batatas ao murro e azeite", price: "R$ 168", img: dish4 },
   ],
   Sobremesas: [
     { name: "Tarte de Maracujá", desc: "Torta fina de maracujá com merengue maçaricado", price: "R$ 42", img: dish4 },
     { name: "Petit Gâteau Tropical", desc: "Bolo quente de chocolate com sorvete de cupuaçu", price: "R$ 48", img: dish4 },
+    { name: "Mousse de Açaí", desc: "Mousse cremosa de açaí com crocante de castanha-do-pará", price: "R$ 36", img: dish2 },
+    { name: "Crème Brûlée de Bacuri", desc: "Creme queimado com sabor de bacuri e caramelo de rapadura", price: "R$ 44", img: dish1 },
   ],
 };
 
@@ -31,7 +39,7 @@ const MenuSection = () => {
   const [active, setActive] = useState("Entradas");
 
   return (
-    <section id="cardapio" className="relative py-32 bg-dark overflow-hidden">
+    <section id="cardapio" className="relative min-h-screen py-32 bg-dark overflow-hidden flex items-center">
       {/* Guará decorativo */}
       <motion.img
         src={guara2}

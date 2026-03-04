@@ -45,13 +45,13 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
             Nossos Espaços
           </p>
           <h2 className="font-display text-5xl md:text-6xl font-light text-foreground mb-2">
             <span className="italic text-primary">Galeria</span>
           </h2>
-          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
+          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
         </motion.div>
 
         {/* Grid */}
@@ -82,8 +82,8 @@ const GallerySection = () => {
                 </motion.p>
               </div>
               {/* Gold corner accent on hover */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-gold/0 group-hover:border-gold/60 transition-all duration-500" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-gold/0 group-hover:border-gold/60 transition-all duration-500" />
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary/0 group-hover:border-primary/60 transition-all duration-500" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-primary/0 group-hover:border-primary/60 transition-all duration-500" />
             </motion.div>
           ))}
         </div>
@@ -101,21 +101,21 @@ const GallerySection = () => {
           >
             <button
               onClick={(e) => { e.stopPropagation(); setSelected(null); }}
-              className="absolute top-6 right-6 text-cream/70 hover:text-gold transition-colors z-50"
+              className="absolute top-6 right-6 text-cream/70 hover:text-primary transition-colors z-50"
             >
               <X size={32} />
             </button>
 
             <button
               onClick={(e) => { e.stopPropagation(); navigate(-1); }}
-              className="absolute left-6 text-cream/50 hover:text-gold transition-colors z-50"
+              className="absolute left-6 text-cream/50 hover:text-primary transition-colors z-50"
             >
               <ChevronLeft size={40} />
             </button>
 
             <button
               onClick={(e) => { e.stopPropagation(); navigate(1); }}
-              className="absolute right-6 text-cream/50 hover:text-gold transition-colors z-50"
+              className="absolute right-6 text-cream/50 hover:text-primary transition-colors z-50"
             >
               <ChevronRight size={40} />
             </button>

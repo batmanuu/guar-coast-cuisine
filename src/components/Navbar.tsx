@@ -24,13 +24,13 @@ const Navbar = () => {
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "py-3 backdrop-blur-xl bg-dark/80 border-b border-gold/20"
+          ? "py-3 backdrop-blur-xl bg-dark/80 border-b border-primary/20"
           : "py-6 bg-transparent"
       }`}
       style={
         scrolled
           ? {
-              boxShadow: "0 4px 40px -10px hsla(34, 73%, 56%, 0.25), inset 0 -1px 0 0 hsla(34, 73%, 56%, 0.15)",
+              boxShadow: "0 4px 40px -10px hsla(355, 46%, 47%, 0.25), inset 0 -1px 0 0 hsla(355, 46%, 47%, 0.15)",
             }
           : {}
       }
@@ -40,7 +40,7 @@ const Navbar = () => {
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent"
+          className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent"
         />
       )}
 
@@ -61,7 +61,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="font-body text-sm font-medium tracking-[0.15em] uppercase text-cream/80 hover:text-gold transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+              className="font-body text-sm font-medium tracking-[0.15em] uppercase text-cream/80 hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.label}
             </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-cream hover:text-gold transition-colors"
+          className="md:hidden text-cream hover:text-primary transition-colors"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -92,7 +92,7 @@ const Navbar = () => {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display text-xl text-cream/80 hover:text-gold transition-colors"
+                  className="font-display text-xl text-cream/80 hover:text-primary transition-colors"
                 >
                   {item.label}
                 </a>

@@ -11,13 +11,13 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
             Venha Nos Visitar
           </p>
           <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-2">
-            <span className="italic text-gold">Localização</span> & Contato
+            <span className="italic text-primary">Localização</span> & Contato
           </h2>
-          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
+          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
@@ -29,8 +29,8 @@ const ContactSection = () => {
             className="space-y-10"
           >
             <div className="flex items-start gap-5">
-              <div className="w-12 h-12 rounded-sm bg-gold/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="text-gold" size={20} />
+              <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <MapPin className="text-primary" size={20} />
               </div>
               <div>
                 <h3 className="font-display text-xl text-cream mb-1">Endereço</h3>
@@ -42,8 +42,8 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start gap-5">
-              <div className="w-12 h-12 rounded-sm bg-gold/10 flex items-center justify-center flex-shrink-0">
-                <Phone className="text-gold" size={20} />
+              <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Phone className="text-primary" size={20} />
               </div>
               <div>
                 <h3 className="font-display text-xl text-cream mb-1">Telefone</h3>
@@ -53,8 +53,8 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start gap-5">
-              <div className="w-12 h-12 rounded-sm bg-gold/10 flex items-center justify-center flex-shrink-0">
-                <Clock className="text-gold" size={20} />
+              <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Clock className="text-primary" size={20} />
               </div>
               <div>
                 <h3 className="font-display text-xl text-cream mb-1">Horário</h3>
@@ -69,15 +69,15 @@ const ContactSection = () => {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-sm bg-cream/5 border border-cream/10 flex items-center justify-center hover:border-gold/50 hover:bg-gold/10 transition-all duration-300"
+                  className="w-12 h-12 rounded-sm bg-cream/5 border border-cream/10 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 >
-                  <Instagram className="text-cream/60 hover:text-gold" size={20} />
+                  <Instagram className="text-cream/60 hover:text-primary" size={20} />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-sm bg-cream/5 border border-cream/10 flex items-center justify-center hover:border-gold/50 hover:bg-gold/10 transition-all duration-300"
+                  className="w-12 h-12 rounded-sm bg-cream/5 border border-cream/10 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 >
-                  <Facebook className="text-cream/60 hover:text-gold" size={20} />
+                  <Facebook className="text-cream/60 hover:text-primary" size={20} />
                 </a>
               </div>
             </div>
@@ -110,7 +110,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-6 mt-24 pt-10 border-t border-cream/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-display text-xl text-cream/40">
-            Restaurante dos <span className="italic text-gold/60">Guarás</span>
+            Restaurante dos <span className="italic text-primary/60">Guarás</span>
           </p>
           <p className="font-body text-xs text-cream/30 tracking-wider">
             © 2025 Todos os direitos reservados

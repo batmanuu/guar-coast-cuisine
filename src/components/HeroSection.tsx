@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const ShimmerParticle = ({ delay, x, y }: { delay: number; x: number; y: number }) => (
   <motion.div
-    className="absolute rounded-full bg-gold/40"
+    className="absolute rounded-full bg-primary/40"
     style={{ left: `${x}%`, top: `${y}%`, width: 4, height: 4 }}
     animate={{
       opacity: [0, 0.8, 0],
@@ -67,7 +67,7 @@ const HeroSection = () => {
           />
 
           <motion.p
-            className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-gold mb-6"
+            className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-primary mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -76,7 +76,7 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.div
-            className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"
+            className="w-20 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 1, duration: 1.5 }}
@@ -98,7 +98,7 @@ const HeroSection = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />
+          <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
         </motion.div>
       </div>
     </section>

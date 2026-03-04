@@ -23,14 +23,14 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
               Nossa História
             </p>
             <h2 className="font-display text-5xl md:text-6xl font-light text-foreground mb-2">
               Sobre{" "}
               <span className="italic text-primary">Nós</span>
             </h2>
-            <div className="w-16 h-[1px] bg-gold mb-8" />
+            <div className="w-16 h-[1px] bg-primary mb-8" />
             <p className="font-body text-muted-foreground leading-relaxed text-lg mb-6">
               Nascido à margem das águas serenas do mangue, o Restaurante dos Guarás é mais que um lugar para se 
               alimentar — é uma experiência sensorial completa. Desde 2010, transformamos os sabores regionais 
@@ -44,17 +44,17 @@ const AboutSection = () => {
             </p>
             <div className="flex items-center gap-6">
               <div className="text-center">
-                <p className="font-display text-4xl text-gold">15</p>
+                <p className="font-display text-4xl text-primary">15</p>
                 <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">Anos</p>
               </div>
               <div className="w-[1px] h-12 bg-border" />
               <div className="text-center">
-                <p className="font-display text-4xl text-gold">Chef</p>
+                <p className="font-display text-4xl text-primary">Chef</p>
                 <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">Premiado</p>
               </div>
               <div className="w-[1px] h-12 bg-border" />
               <div className="text-center">
-                <p className="font-display text-4xl text-gold">100%</p>
+                <p className="font-display text-4xl text-primary">100%</p>
                 <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">Regional</p>
               </div>
             </div>
@@ -78,7 +78,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-dark/30 to-transparent" />
             </div>
             {/* Decorative frame */}
-            <div className="absolute -top-4 -right-4 w-full h-full border border-gold/30 rounded-sm -z-10" />
+            <div className="absolute -top-4 -right-4 w-full h-full border border-primary/30 rounded-sm -z-10" />
           </motion.div>
         </div>
       </div>

@@ -107,12 +107,12 @@ const ContactSection = () => {
       </div>
 
       {/* Footer */}
-      <div className="container mx-auto px-6 mt-24 pt-10 border-t border-cream/10">
+      <div className="container mx-auto px-6 mt-24 pt-10 border-t border-dark/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-display text-xl text-cream/40">
+          <p className="font-display text-xl text-dark/40">
             Restaurante dos <span className="italic text-primary/60">Guarás</span>
           </p>
-          <p className="font-body text-xs text-cream/30 tracking-wider">
+          <p className="font-body text-xs text-dark/30 tracking-wider">
             © 2025 Todos os direitos reservados
           </p>
         </div>

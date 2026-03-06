@@ -3,7 +3,7 @@ import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="localizacao" className="relative py-32 bg-dark overflow-hidden">
+    <section id="localizacao" className="relative py-32 bg-petrol overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"

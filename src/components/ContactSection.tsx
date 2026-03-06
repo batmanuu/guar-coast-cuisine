@@ -33,8 +33,8 @@ const ContactSection = () => {
                 <MapPin className="text-primary" size={20} />
               </div>
               <div>
-                <h3 className="font-display text-xl text-cream mb-1">Endereço</h3>
-                <p className="font-body text-cream/50 text-sm leading-relaxed">
+                <h3 className="font-display text-xl text-dark mb-1">Endereço</h3>
+                <p className="font-body text-dark/50 text-sm leading-relaxed">
                   Av. Beira Mar, 1200 — Mangue<br />
                   São Luís, MA — Brasil
                 </p>

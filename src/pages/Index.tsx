@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ParallaxGuara from "@/components/ParallaxGuara";
 import AboutSection from "@/components/AboutSection";
 import MenuSection from "@/components/MenuSection";
 import GallerySection from "@/components/GallerySection";
@@ -10,6 +11,7 @@ const Index = () => {
     <main className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <ParallaxGuara />
       <AboutSection />
       <MenuSection />
       <GallerySection />

@@ -14,7 +14,7 @@ const ContactSection = () => {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
             Venha Nos Visitar
           </p>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-2">
+          <h2 className="font-display text-5xl md:text-6xl font-light text-dark mb-2">
             <span className="italic text-primary">Localização</span> & Contato
           </h2>
           <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />

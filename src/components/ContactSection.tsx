@@ -46,9 +46,9 @@ const ContactSection = () => {
                 <Phone className="text-primary" size={20} />
               </div>
               <div>
-                <h3 className="font-display text-xl text-cream mb-1">Telefone</h3>
-                <p className="font-body text-cream/50 text-sm">(98) 3232-1200</p>
-                <p className="font-body text-cream/50 text-sm">(98) 99900-1200</p>
+                <h3 className="font-display text-xl text-dark mb-1">Telefone</h3>
+                <p className="font-body text-dark/50 text-sm">(98) 3232-1200</p>
+                <p className="font-body text-dark/50 text-sm">(98) 99900-1200</p>
               </div>
             </div>
 

@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import heroImg from "@/assets/hero-restaurant.jpg";
+import guara1 from "@/assets/guara-3d-1.png";
 
 const FloatingMist = ({ delay, x, duration }: { delay: number; x: number; duration: number }) => (
   <motion.div
@@ -18,12 +20,7 @@ const FloatingMist = ({ delay, x, duration }: { delay: number; x: number; durati
       opacity: [0, 0.6, 0.3, 0],
       scale: [0.8, 1.4, 1.1, 0.8],
     }}
-    transition={{
-      duration,
-      delay,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
+    transition={{ duration, delay, repeat: Infinity, ease: "easeInOut" }}
   />
 );
 
@@ -44,16 +41,26 @@ const Firefly = ({ delay, x, y }: { delay: number; x: number; y: number }) => (
       y: [0, -25, -10, -35, -50],
       scale: [0.5, 1, 0.7, 1.2, 0.3],
     }}
-    transition={{
-      duration: 5 + Math.random() * 4,
-      delay,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
+    transition={{ duration: 5 + Math.random() * 4, delay, repeat: Infinity, ease: "easeInOut" }}
   />
 );
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Guará starts centered and "takes flight" as user scrolls
+  const guaraX = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["0%", "-10%", "-50%", "-120%"]);
+  const guaraY = useTransform(scrollYProgress, [0, 0.2, 0.5, 1], ["0%", "-15%", "-40%", "-80%"]);
+  const guaraRotate = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, -8, -15, -25]);
+  const guaraScale = useTransform(scrollYProgress, [0, 0.3, 0.6, 1], [1, 1.15, 1.05, 0.7]);
+
+  // Wing flap simulation via subtle rotation oscillation is handled by the ambient animation
+
   const mists = Array.from({ length: 8 }, (_, i) => ({
     id: i,
     delay: i * 1.5,
@@ -61,7 +68,7 @@ const HeroSection = () => {
     duration: 10 + Math.random() * 6,
   }));
 
-  const fireflies = Array.from({ length: 30 }, (_, i) => ({
+  const fireflies = Array.from({ length: 25 }, (_, i) => ({
     id: i,
     delay: Math.random() * 6,
     x: Math.random() * 100,
@@ -69,8 +76,8 @@ const HeroSection = () => {
   }));
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background image with Ken Burns effect */}
+    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden">
+      {/* Background with Ken Burns */}
       <motion.div
         className="absolute inset-0"
         animate={{ scale: [1, 1.08, 1.03, 1.06] }}
@@ -78,7 +85,7 @@ const HeroSection = () => {
       >
         <img
           src={heroImg}
-          alt="Interior do Restaurante dos Guarás com vista para o mangue"
+          alt="Vista do mangue ao entardecer"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -111,24 +118,50 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Minimal centered text — just a whisper */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-end pb-28">
+      {/* GUARÁ — the hero focal point */}
+      <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
         <motion.div
-          className="text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 2 }}
+          style={{
+            x: guaraX,
+            y: guaraY,
+            rotate: guaraRotate,
+            scale: guaraScale,
+          }}
         >
-          <motion.p
-            className="font-body text-xs tracking-[0.4em] uppercase text-cream/50"
-            animate={{ opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
-            Role para descobrir
-          </motion.p>
+          {/* Ambient gentle hover */}
+          <motion.img
+            src={guara1}
+            alt="Guará — ave símbolo do mangue"
+            className="w-64 md:w-80 lg:w-96 drop-shadow-2xl"
+            style={{
+              filter: "drop-shadow(0 30px 60px hsl(var(--dark) / 0.4))",
+            }}
+            initial={{ opacity: 0, scale: 0.7, y: 40 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: [0, -12, 0],
+            }}
+            transition={{
+              opacity: { delay: 0.5, duration: 1.5 },
+              scale: { delay: 0.5, duration: 1.5 },
+              y: { delay: 2, duration: 4, repeat: Infinity, ease: "easeInOut" },
+            }}
+          />
         </motion.div>
+      </div>
 
-        {/* Scroll indicator */}
+      {/* Subtle bottom text */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-end pb-28">
+        <motion.p
+          className="font-body text-xs tracking-[0.4em] uppercase text-cream/40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0.2, 0.5, 0.2] }}
+          transition={{ delay: 2, duration: 4, repeat: Infinity }}
+        >
+          Role para descobrir
+        </motion.p>
+
         <motion.div
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}

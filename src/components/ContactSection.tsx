@@ -65,7 +65,7 @@ const ContactSection = () => {
 
             {/* Social */}
             <div>
-              <h3 className="font-display text-xl text-cream mb-4">Redes Sociais</h3>
+              <h3 className="font-display text-xl text-dark mb-4">Redes Sociais</h3>
               <div className="flex gap-4">
                 <a
                   href="#"

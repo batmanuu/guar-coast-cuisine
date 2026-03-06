@@ -69,15 +69,15 @@ const ContactSection = () => {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-sm bg-cream/5 border border-cream/10 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+                  className="w-12 h-12 rounded-sm bg-dark/5 border border-dark/10 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 >
-                  <Instagram className="text-cream/60 hover:text-primary" size={20} />
+                  <Instagram className="text-dark/60 hover:text-primary" size={20} />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-sm bg-cream/5 border border-cream/10 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+                  className="w-12 h-12 rounded-sm bg-dark/5 border border-dark/10 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 >
-                  <Facebook className="text-cream/60 hover:text-primary" size={20} />
+                  <Facebook className="text-dark/60 hover:text-primary" size={20} />
                 </a>
               </div>
             </div>

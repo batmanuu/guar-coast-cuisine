@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/image1-8-removebg-preview.png";
 
 const navItems = [
   { label: "Sobre Nós", href: "#sobre" },
@@ -22,16 +22,15 @@ const Navbar = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
-          ? "py-3 backdrop-blur-xl bg-dark/80 border-b border-gold/20"
-          : "py-6 bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled
+        ? "py-3 backdrop-blur-xl bg-dark/80 border-b border-gold/20"
+        : "py-6 bg-transparent"
+        }`}
       style={
         scrolled
           ? {
-              boxShadow: "0 4px 40px -10px hsla(34, 73%, 56%, 0.25), inset 0 -1px 0 0 hsla(34, 73%, 56%, 0.15)",
-            }
+            boxShadow: "0 4px 40px -10px hsla(34, 73%, 56%, 0.25), inset 0 -1px 0 0 hsla(34, 73%, 56%, 0.15)",
+          }
           : {}
       }
     >
@@ -48,10 +47,9 @@ const Navbar = () => {
         <a href="#" className="flex items-center gap-2 group">
           <img
             src={logo}
-            alt="Sítio dos Guarás"
-            className={`transition-all duration-500 brightness-0 invert opacity-90 group-hover:opacity-100 ${
-              scrolled ? "h-10" : "h-14"
-            }`}
+            alt="Restaurante dos Guarás"
+            className={`transition-all duration-500 brightness-0 invert opacity-90 group-hover:opacity-100 ${scrolled ? "h-10" : "h-14"
+              }`}
           />
         </a>
 

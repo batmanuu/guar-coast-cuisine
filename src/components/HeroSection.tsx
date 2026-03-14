@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-restaurant.jpg";
-import logo from "@/assets/logo.png";
+import heroVideo from "@/assets/Video Project Final Reverse.mp4";
+import logo from "@/assets/Imagem9-edit-removebg-preview.png";
 
 const ShimmerParticle = ({ delay, x, y }: { delay: number; x: number; y: number }) => (
   <motion.div
@@ -21,7 +21,7 @@ const ShimmerParticle = ({ delay, x, y }: { delay: number; x: number; y: number 
 );
 
 const HeroSection = () => {
-  const particles = Array.from({ length: 25 }, (_, i) => ({
+  const particles = Array.from({ length: 100 }, (_, i) => ({
     id: i,
     delay: Math.random() * 4,
     x: Math.random() * 100,
@@ -30,17 +30,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Interior do Restaurante dos Guarás com vista para o mangue"
+        <video
+          src={heroVideo}
           className="w-full h-full object-cover"
-          loading="eager"
+          autoPlay
+          muted
+          loop
+          playsInline
         />
         {/* Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/30 to-dark/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/30 via-dark/30 to-dark/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/30 to-transparent" />
       </div>
 
       {/* Shimmer particles */}
@@ -59,24 +61,25 @@ const HeroSection = () => {
         >
           <motion.img
             src={logo}
-            alt="Sítio dos Guarás"
-            className="h-32 md:h-44 lg:h-52 mx-auto mb-8 brightness-0 invert opacity-90"
+            alt="Restaurante dos Guarás"
+            className="h-40 md:h-52 lg:h-60 mx-auto mb-8 brightness-0 invert opacity-90"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 0.9, scale: 1 }}
             transition={{ delay: 0.3, duration: 1.2 }}
           />
 
           <motion.p
-            className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-gold mb-6"
+            className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-white mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 1 }}
           >
             Gastronomia à beira do mangue
+            {/* Trocar a cor para vermelho guara ou verde natureza. Dentro da nossa paleta de cores. */}
           </motion.p>
 
           <motion.div
-            className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"
+            className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 1, duration: 1.5 }}
@@ -98,7 +101,7 @@ const HeroSection = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />
+          <div className="w-[1px] h-20 bg-gradient-to-b from-gold to-transparent" />
         </motion.div>
       </div>
     </section>

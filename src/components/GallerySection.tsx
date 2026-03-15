@@ -2,39 +2,39 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import heroImg from "@/assets/Imagem1.jpg";
-import aboutImg from "@/assets/Cópia-de-IMG_2804.avif";
-import gallery1 from "@/assets/melhoria_vista_cais.png";
-import gallery2 from "@/assets/Imagem8-copy.jpg";
-import gallery3 from "@/assets/vista_area_tarde.jpeg";
-import dish1 from "@/assets/Cópia-de-IMG_2790.avif";
+import heroImg from "@/assets/guarasteto.jpg";
+import aboutImg from "@/assets/vistasol.jpg";
+import gallery1 from "@/assets/drinks.png";
+import gallery2 from "@/assets/IMG_2808.jpg";
+import gallery3 from "@/assets/faixada.jpeg";
+import dish1 from "@/assets/vertical.png";
 import guara3 from "@/assets/guara-3d-3.png";
 import vista_salao from "@/assets/IMG_2822.jpg";
-import dish3 from "@/assets/DJI_0328.jpg"; // Using an existing dessert image as placeholder
-import dish4 from "@/assets/sorvete_regional.png"; // Using an existing drink image as placeholder
+import dish3 from "@/assets/vista_area_noturna.jpeg"; // Using an existing dessert image as placeholder
+import dish4 from "@/assets/pratos.png"; // Using an existing drink image as placeholder
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 const images = [
   // 0: Top Left [2x2]
-  { src: heroImg, title: "Salão Principal", isCenter: false, className: "col-span-2 row-span-2 col-start-1 row-start-1", moveX: "-30vw", moveY: "-30vh" },
-  // 1: Top Center [2x1] (Gap top)
-  { src: aboutImg, title: "Terraço ao Pôr do Sol", isCenter: false, className: "col-span-2 row-span-1 col-start-3 row-start-2", moveX: "0", moveY: "-30vh" },
+  { src: heroImg, title: "Restaurante Guarás", isCenter: false, className: "col-span-2 row-span-2 col-start-1 row-start-1", moveX: "-30vw", moveY: "-30vh" },
+  // 1: Top Center [2x2]
+  { src: aboutImg, title: "Terraço ao Pôr do Sol", isCenter: false, className: "col-span-2 row-span-2 col-start-3 row-start-1", moveX: "0", moveY: "-30vh" },
   // 2: Top Right [2x3]
   { src: gallery1, title: "Bar & Drinks", isCenter: false, className: "col-span-2 row-span-3 col-start-5 row-start-1", moveX: "30vw", moveY: "-30vh" },
   // 3: Middle Left [2x3]
-  { src: gallery2, title: "Jantar à Luz de Velas", isCenter: false, className: "col-span-2 row-span-3 col-start-1 row-start-3", moveX: "-30vw", moveY: "0" },
+  { src: gallery2, title: "Natureza", isCenter: false, className: "col-span-2 row-span-3 col-start-1 row-start-3", moveX: "-30vw", moveY: "0" },
   // 4: CENTER [2x2] -> Crucial: col 3-4, row 3-4 makes it the exact center of a 6x6 grid.
-  { src: gallery3, title: "Vista do Mangue", isCenter: true, className: "col-span-2 row-span-2 col-start-3 row-start-3", moveX: "0", moveY: "0" },
-  // 5: Middle Right [1x2]
-  { src: dish1, title: "Nossos Pratos", isCenter: false, className: "col-span-1 row-span-2 col-start-5 row-start-4", moveX: "30vw", moveY: "0" },
+  { src: gallery3, title: "Nosso espaço", isCenter: true, className: "col-span-2 row-span-2 col-start-3 row-start-3", moveX: "0", moveY: "0" },
+  // 5: Middle Right [1x3]
+  { src: dish1, title: "Sossego", isCenter: false, className: "col-span-1 row-span-3 col-start-5 row-start-4", moveX: "30vw", moveY: "0" },
   // 6: Bottom Right 1 [1x3]
-  { src: vista_salao, title: "Chef's Special", isCenter: false, className: "col-span-1 row-span-3 col-start-6 row-start-4", moveX: "30vw", moveY: "30vh" },
+  { src: vista_salao, title: "Vista do Salão", isCenter: false, className: "col-span-1 row-span-3 col-start-6 row-start-4", moveX: "30vw", moveY: "30vh" },
   // 7: Bottom Center [2x2]
-  { src: dish4, title: "Detalhes", isCenter: false, className: "col-span-2 row-span-2 col-start-3 row-start-5", moveX: "0", moveY: "30vh" },
+  { src: dish4, title: "Nossos Pratos", isCenter: false, className: "col-span-2 row-span-2 col-start-3 row-start-5", moveX: "0", moveY: "30vh" },
   // 8: Bottom Left gap [2x1]
-  { src: dish3, title: "Clima Noturno", isCenter: false, className: "col-span-2 row-span-1 col-start-1 row-start-6", moveX: "-30vw", moveY: "30vh" },
+  { src: dish3, title: "Clima Noturno", isCenter: false, className: "col-span-2 row-span-1 col-start-1 row-start-6", moveX: "-30vw", moveY: "20vh" },
 ];
 
 gsap.registerPlugin(ScrollTrigger);
